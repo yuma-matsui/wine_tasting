@@ -1,0 +1,131 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+/* ============共通部分============== */
+/* ================================== */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* =========共通部分ここまで========= */
+/* ================================== */
+/* ============ヘッダー============== */
+/* ================================== */
+header {
+  width: 100%;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 40px;
+  color: brown;
+  font-family: "Dancing Script", cursive;
+  line-height: 60px;
+}
+
+header img {
+  height: 60px;
+  width: 60px;
+}
+
+header ul {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========ヘッダーここまで========= */
+/* ================================== */
+/* ==============メイン============== */
+/* ================================== */
+.main-wrapper {
+  width: 100%;
+}
+
+.main-wrapper .image-box {
+  position: relative;
+}
+
+.main-wrapper .image-box img {
+  height: 500px;
+}
+
+.main-wrapper .image-box .image-box-text {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
+
+.main-wrapper .image-box .image-box-text p {
+  font-size: 38px;
+  color: white;
+  font-family: "Dancing Script", cursive;
+}
+
+/* ===========メインここまで========= */
+/* ================================== */
+/* ============セカンド============== */
+/* ================================== */
+.second-wrapper {
+  width: 100%;
+}
+
+.second-wrapper h2 {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+}
+
+.second-wrapper .items-space {
+  width: 100%;
+  height: 500px;
+  background-color: teal;
+}
+
+.second-wrapper a {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+/* ==========セカンドここまで======== */
+/* ================================== */
+/* ============フッター============== */
+/* ================================== */
+footer {
+  width: 100%;
+}
+
+footer h3 {
+  font-weight: 600;
+  font-size: 25px;
+}
+
+footer .footer-article h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+footer .footer-article h6 {
+  font-size: 16px;
+  font-weight: 550;
+}
+
+footer .footer-article li {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+footer .footer-logo h4 {
+  font-size: 20px;
+  font-family: "Dancing Script", cursive;
+  color: brown;
+  line-height: 35px;
+}
+
+footer .footer-logo img {
+  width: 35px;
+  height: 35px;
+}
+
+/* =========フッターここまで========= */
+/* ================================== */
+/*# sourceMappingURL=home.css.map */
