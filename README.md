@@ -37,7 +37,6 @@ Things you may want to cover:
 ### Association
 
 - has_many :wines
-- has_many :comments
 - has_many :likes
 
 ## wines テーブル
