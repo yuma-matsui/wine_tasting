@@ -11,8 +11,8 @@
           <li>Tasting Note</li>
           <li>カテゴリー</li>
           <li><a href="#footer-article" class="text-decoration-none text-dark">記事</a></li>
-          <li>会員登録</li>
-          <li>ログイン</li>
+          <li><%= link_to '会員登録', new_user_registration_path, class:'text-decoration-none text-dark' %></li>
+          <li><%= link_to 'ログイン', new_user_session_path, class: 'text-decoration-none text-dark' %></li>
         </ul>
       </nav>
     </div>
