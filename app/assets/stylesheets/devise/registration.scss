@@ -6,8 +6,14 @@
     box-shadow: 0 0 5px rgba($color: #000000, $alpha: .9);
     width: 50%;
     margin: 20px auto;
-    padding: 50px;
+    padding: 0 50px 50px;
     font-weight: 600;
+
+    & h2{
+      font-size: 25px;
+      font-weight: bold;
+      padding: 20px 0;
+    }
   }
   & .register-btn{
     outline: unset;
