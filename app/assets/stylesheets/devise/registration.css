@@ -1,0 +1,39 @@
+.registration-wrapper {
+  height: 100vh;
+}
+
+.registration-wrapper .registration-form {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  width: 50%;
+  margin: 20px auto;
+  padding: 0 50px 50px;
+  font-weight: 600;
+}
+
+.registration-wrapper .registration-form h2 {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.registration-wrapper .register-btn {
+  outline: unset;
+  background-color: unset;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.9);
+          box-shadow: 0 3px 0 rgba(0, 0, 0, 0.9);
+}
+
+.registration-wrapper .register-btn:active {
+  position: relative;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 3px;
+}
+/*# sourceMappingURL=registration.css.map */

@@ -1,0 +1,15 @@
+#error_explanation {
+  color: red;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#error_explanation h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#error_explanation ul li {
+  font-size: 14px;
+}
+/*# sourceMappingURL=error_messages.css.map */
