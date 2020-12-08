@@ -12,6 +12,7 @@
           <li>カテゴリー</li>
           <li><a href="#footer-article" class="text-decoration-none text-dark">記事</a></li>
           <% if user_signed_in? %>
+            <li><%= link_to '登録情報変更', edit_user_registration_path, class: 'text-decoration-none text-dark' %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, class: 'text-decoration-none text-dark', method: :delete %></li>
           <% else %>
             <li><%= link_to 'ログイン', new_user_session_path, class: 'text-decoration-none text-dark' %></li>

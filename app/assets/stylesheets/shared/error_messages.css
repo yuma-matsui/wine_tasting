@@ -10,6 +10,12 @@
 }
 
 #error_explanation ul li {
-  font-size: 14px;
+  font-size: 12px;
+  list-style: circle;
+  margin-bottom: 5px;
+}
+
+#error_explanation ul li:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=error_messages.css.map */
