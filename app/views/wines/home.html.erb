@@ -55,18 +55,18 @@
           <h5>生産国</h5>
           <nav class="d-md-flex">
             <ul class="mr-3">
-              <li>フランス</li>
-              <li>イタリア</li>
-              <li>スペイン</li>
-              <li>アメリカ</li>
-              <li>チリ</li>
+              <li data-toggle="modal" data-target="#exampleModal">フランス</li>
+              <li data-toggle="modal" data-target="#exampleModal2">イタリア</li>
+              <li data-toggle="modal" data-target="#exampleModal3">スペイン</li>
+              <li data-toggle="modal" data-target="#exampleModal4">アメリカ</li>
+              <li data-toggle="modal" data-target="#exampleModal5">チリ</li>
             </ul>
             <ul>
-              <li>オーストラリア</li>
-              <li>ニュージーランド</li>
-              <li>日本</li>
-              <li>南アフリカ</li>
-              <li>アルゼンチン</li>
+              <li data-toggle="modal" data-target="#exampleModal6">オーストラリア</li>
+              <li data-toggle="modal" data-target="#exampleModal7">ニュージーランド</li>
+              <li data-toggle="modal" data-target="#exampleModal8">日本</li>
+              <li data-toggle="modal" data-target="#exampleModal9">南アフリカ</li>
+              <li data-toggle="modal" data-target="#exampleModal10">アルゼンチン</li>
             </ul>
           </nav>
         </div>
@@ -76,25 +76,25 @@
             <nav class="mr-4">
               <h6>白ぶどう</h6>
               <ul>
-                <li>シャルドネ</li>
-                <li>ソーヴィニヨン・ブラン</li>
-                <li>リースリング</li>
-                <li>ヴィオニエ</li>
-                <li>甲州</li>
-                <li>ゲヴェルツトラミネール</li>
-                <li>ピノ・グリ</li>
+                <li data-toggle="modal" data-target="#exampleModal11">シャルドネ</li>
+                <li data-toggle="modal" data-target="#exampleModal12">ソーヴィニヨン・ブラン</li>
+                <li data-toggle="modal" data-target="#exampleModal13">リースリング</li>
+                <li data-toggle="modal" data-target="#exampleModal14">ヴィオニエ</li>
+                <li data-toggle="modal" data-target="#exampleModal15">甲州</li>
+                <li data-toggle="modal" data-target="#exampleModal16">ゲヴェルツトラミネール</li>
+                <li data-toggle="modal" data-target="#exampleModal17">ピノ・グリ</li>
               </ul>
             </nav>
             <nav>
               <h6>黒ぶどう</h6>
               <ul>
-                <li>カベルネ・ソーヴィニヨン</li>
-                <li>メルロ</li>
-                <li>ピノ・ノワール</li>
-                <li>シラー</li>
-                <li>マルベック</li>
-                <li>サンジョベーゼ</li>
-                <li>テンプラニーリョ</li>
+                <li data-toggle="modal" data-target="#exampleModal18">カベルネ・ソーヴィニヨン</li>
+                <li data-toggle="modal" data-target="#exampleModal19">メルロ</li>
+                <li data-toggle="modal" data-target="#exampleModal20">ピノ・ノワール</li>
+                <li data-toggle="modal" data-target="#exampleModal21">シラー</li>
+                <li data-toggle="modal" data-target="#exampleModal22">マルベック</li>
+                <li data-toggle="modal" data-target="#exampleModal23">サンジョベーゼ</li>
+                <li data-toggle="modal" data-target="#exampleModal24">テンプラニーリョ</li>
               </ul>
             </nav>
           </div>
@@ -107,4 +107,10 @@
     </div>
   </footer>
   <%# フッターここまで %>
+
+  <%# モーダル部分 %>
+  <%= render 'article.country' %>
+  <%= render 'article.white' %>
+  <%= render 'article.red' %>
+  <%# モーダル部分 %>
 </div>
