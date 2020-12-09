@@ -112,7 +112,8 @@ footer .footer-article h6 {
 
 footer .footer-article li {
   font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
 footer .footer-logo h4 {
@@ -129,4 +130,16 @@ footer .footer-logo img {
 
 /* =========フッターここまで========= */
 /* ================================== */
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body p {
+  line-height: 40px;
+}
 /*# sourceMappingURL=home.css.map */

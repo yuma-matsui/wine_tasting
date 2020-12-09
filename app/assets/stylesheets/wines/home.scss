@@ -126,7 +126,8 @@ footer{
 
     & li{
       font-size: 15px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
+      cursor: pointer;
     }
   }
 
@@ -146,3 +147,22 @@ footer{
 
 /* =========フッターここまで========= */
 /* ================================== */
+
+
+// ======モーダル部分ここから=======
+//==================================
+
+.modal-title{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-body{
+  padding: 20px;
+  & p{
+    line-height: 40px;
+  }
+}
+
+// ======モーダル部分ここまで=======
+//==================================
