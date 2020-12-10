@@ -1,6 +1,6 @@
 class AlcoholVolume < ActiveHash::Base
   self.data = [
-    { id: 1, name: "--" },
+    { id: 1, name: "アルコール度数" },
     { id: 2, name: "8%" },
     { id: 3, name: "8.5%" },
     { id: 4, name: "9%" },

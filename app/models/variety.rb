@@ -1,6 +1,6 @@
 class Variety < ActiveHash::Base
   self.data = [
-    { id: 1, name: "--" },
+    { id: 1, name: "ぶどう品種" },
     { id: 2, name: "カベルネ・ソーヴィニヨン" },
     { id: 3, name: "メルロ" },
     { id: 4, name: "ピノ・ノワール" },

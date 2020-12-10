@@ -1,6 +1,6 @@
 class TannicLevel < ActiveHash::Base
   self.data = [
-    { id: 1, name: "--" },
+    { id: 1, name: "渋み" },
     { id: 2, name: "収斂性のある" },
     { id: 3, name: "力強い" },
     { id: 4, name: "緻密" },

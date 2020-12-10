@@ -1,6 +1,6 @@
 class AcidityLevel < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '酸味' },
     { id: 2, name: 'シャープな' },
     { id: 3, name: '爽やかな' },
     { id: 4, name: 'なめらかな' },

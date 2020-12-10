@@ -1,6 +1,6 @@
 class SecondFlavor < ActiveHash::Base
   self.data = [
-    { id: 1, name: "--" },
+    { id: 1, name: "香り2" },
     { id: 2, name: "白バラ" },
     { id: 3, name: "ミント" },
     { id: 4, name: "バナナ" },

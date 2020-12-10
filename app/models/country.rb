@@ -1,6 +1,6 @@
 class Country < ActiveHash::Base
   self.data = [
-    { id: 1, name: "--" },
+    { id: 1, name: "生産国" },
     { id: 2, name: "フランス" },
     { id: 3, name: "イタリア" },
     { id: 4, name: "スペイン" },

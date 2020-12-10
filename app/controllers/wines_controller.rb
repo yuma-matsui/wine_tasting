@@ -4,6 +4,7 @@ class WinesController < ApplicationController
   end
 
   def new
+    @wine = Wine.new
   end
   
 end

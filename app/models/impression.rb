@@ -1,6 +1,6 @@
 class Impression < ActiveHash::Base
   self.data = [
-    { id: 1, name: "--" },
+    { id: 1, name: "香りの第一印象" },
     { id: 2, name: "閉じている" },
     { id: 3, name: "控えめ" },
     { id: 4, name: "しっかりと感じられる" },
