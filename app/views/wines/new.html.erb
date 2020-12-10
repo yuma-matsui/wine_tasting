@@ -10,31 +10,37 @@
         </div>
         <div class="form__box d-md-flex">
           <div class="form__item">
-            <%= f.label :name, 'Name', class:"form__label" %><br>
+            <%= f.label :name, 'Name', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.text_field :name, class:"form__content", placeholder:'ワイン名' %>
           </div>
           <div class="form__item">
-            <%= f.label :image, 'Image', class:'form__label' %><br>
+            <%= f.label :image, 'Image', class:'form__label' %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.file_field :image, class: "form__image"%>
           </div>
         </div>
         <div class="form__box d-md-flex">
           <div class="form__item">
-            <%= f.label :color_id, 'Color', class:"form__label" %><br>
+            <%= f.label :color_id, 'Color', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:color_id, Color.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
           <div class="form__item">
-            <%= f.label :variety_id, 'Variety', class:"form__label" %><br>
+            <%= f.label :variety_id, 'Variety', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:variety_id, Variety.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
         </div>
         <div class="form__box d-md-flex">
           <div class="form__item">
-            <%= f.label :country_id, 'Country', class:"form__label" %><br>
+            <%= f.label :country_id, 'Country', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:country_id, Country.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
           <div class="form__item">
-            <%= f.label :vintage, 'Vintage', class:"form__label" %><br>
+            <%= f.label :vintage, 'Vintage', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span><br>
             <%= f.date_select(:vintage, 
               prompt:'ヴィンテージ',
               start_year: ( Time.now.year - 1),
@@ -45,37 +51,44 @@
         </div>
         <div class="form__box d-md-flex">
           <div class="form__item">
-            <%= f.label :alcohol_volume_id, 'Alcohol Volume', class:"form__label" %><br>
+            <%= f.label :alcohol_volume_id, 'Alcohol Volume', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:alcohol_volume_id, AlcoholVolume.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
           <div class="form__item">
-            <%= f.label :impression_id, 'First Impression', class:"form__label" %><br>
+            <%= f.label :impression_id, 'First Impression', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:impression_id, Impression.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
         </div>
         <div class="form__box d-md-flex">
           <div class="form__item">
-            <%= f.label :flavor_id, 'Flavor', class:"form__label" %><br>
+            <%= f.label :flavor_id, 'Flavor', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:flavor_id, Flavor.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
           <div class="form__item">
-            <%= f.label :second_flavor_id, 'Flavor2', class:"form__label" %><br>
+            <%= f.label :second_flavor_id, 'Flavor2', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:second_flavor_id, SecondFlavor.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
         </div>
         <div class="form__box d-md-flex">
           <div class="form__item">
-            <%= f.label :acidity_level_id, 'Acidity', class:"form__label" %><br>
+            <%= f.label :acidity_level_id, 'Acidity', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.collection_select(:acidity_level_id, AcidityLevel.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
           <div class="form__item">
-            <%= f.label :tannic_level_id, 'Tannic(Red)', class:"form__label" %><br>
+            <%= f.label :tannic_level_id, 'Tannic(Red)', class:"form__label" %>
+            <span class="badge bg-secondary text-white ml-1">任意</span>
             <%= f.collection_select(:tannic_level_id, TannicLevel.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
         </div>
         <div class="form__box">
           <div class="form__item">
-            <%= f.label :comment, 'Comment', class:"form__label" %><br>
+            <%= f.label :comment, 'Comment', class:"form__label" %>
+            <span class="badge bg-danger text-white ml-1">必須</span>
             <%= f.text_area :comment, placeholder: 'フルコメントでワインについてまとめましょう。', class:"form__comment" %>
           </div>
         </div>
