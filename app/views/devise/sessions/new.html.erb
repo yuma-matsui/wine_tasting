@@ -1,26 +1,27 @@
+<%= render 'shared/sub_header' %>
 <div class="registration-wrapper">
-  <%= render 'shared/sub_header' %>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="registration-form container">
-          <h2>ログイン</h2>
+          <h2>Log in</h2>
           <div class="row">
             <div class="col-12">
-              <%= f.label :'メールアドレス' %>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"w-100" %>
+              <%= f.label :'email', 'Email' %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-box" %>
             </div>
           </div>
 
           <div class="row mt-4">
             <div class="field col-12">
-              <%= f.label :'パスワード' %>
-              <%= f.password_field :password, autocomplete: "current-password", class:"w-100" %>
+              <%= f.label :'password', 'Password' %>
+              <%= f.password_field :password, autocomplete: "current-password", class:"form-box" %>
             </div>
           </div>
 
           <div class="actions mt-4 text-center">
-            <%= f.submit "ログイン", class:"register-btn" %>
+            <%= f.submit "Log in", class:"register-btn" %>
           </div>
         </div>
       <% end %>
-  <%= render 'shared/sub_footer' %>
+      <%= image_tag '/assets/background2.jpg', class:'registration-bg' %>
 </div>
+<%= render 'shared/sub_footer' %>
