@@ -23,7 +23,7 @@ header h1 {
   line-height: 60px;
 }
 
-header img {
+header .header-img {
   height: 60px;
   width: 60px;
 }
@@ -45,7 +45,7 @@ header ul {
   position: relative;
 }
 
-.main-wrapper .image-box img {
+.main-wrapper .image-box .main-img {
   height: 500px;
   width: 100%;
 }
@@ -123,7 +123,7 @@ footer .footer-logo h4 {
   line-height: 35px;
 }
 
-footer .footer-logo img {
+footer .footer-logo .footer-img {
   width: 35px;
   height: 35px;
 }

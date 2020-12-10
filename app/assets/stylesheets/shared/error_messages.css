@@ -5,7 +5,7 @@
 }
 
 #error_explanation h2 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -17,5 +17,10 @@
 
 #error_explanation ul li:last-child {
   margin-bottom: 0;
+}
+
+.error-alert {
+  color: red;
+  font-family: "Dancing Script", cursive;
 }
 /*# sourceMappingURL=error_messages.css.map */

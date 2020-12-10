@@ -1,12 +1,15 @@
 .registration-wrapper {
-  height: 100vh;
+  font-family: "Dancing Script", cursive;
+  position: relative;
+  width: 95%;
+  margin: 10px auto;
+  padding: 20px 0;
+  -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
 .registration-wrapper .registration-form {
-  background-color: #f5f5f5;
   border-radius: 3px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   width: 50%;
   margin: 20px auto;
   padding: 0 50px 30px;
@@ -14,9 +17,19 @@
 }
 
 .registration-wrapper .registration-form h2 {
-  font-size: 25px;
+  font-size: 35px;
   font-weight: bold;
   padding: 20px 0;
+}
+
+.registration-wrapper .registration-form .form-box {
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.registration-wrapper .registration-form .form-label {
+  font-size: 25px;
 }
 
 .registration-wrapper .register-btn {
@@ -25,7 +38,7 @@
   border: 1px solid black;
   border-radius: 3px;
   background-color: white;
-  padding: 5px 10px;
+  padding: 5px 15px;
   -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.9);
           box-shadow: 0 3px 0 rgba(0, 0, 0, 0.9);
 }
@@ -35,5 +48,17 @@
   -webkit-box-shadow: none;
           box-shadow: none;
   top: 3px;
+}
+
+.registration-bg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .3;
 }
 /*# sourceMappingURL=registration.css.map */
