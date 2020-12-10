@@ -5,10 +5,17 @@
   </div>
     <%= form_with model: @wine, local: true do |f| %>
       <div class="form__inner d-flex flex-column px-3">
-        <div class="form__box">
+        <div class="errors mt-3">
+          <%= render 'shared/error_messages2', model: @wine %>
+        </div>
+        <div class="form__box d-md-flex">
           <div class="form__item">
             <%= f.label :name, 'Name', class:"form__label" %><br>
             <%= f.text_field :name, class:"form__content", placeholder:'ワイン名' %>
+          </div>
+          <div class="form__item">
+            <%= f.label :image, 'Image', class:'form__label' %><br>
+            <%= f.file_field :image, class: "form__image"%>
           </div>
         </div>
         <div class="form__box d-md-flex">
@@ -39,7 +46,7 @@
         <div class="form__box d-md-flex">
           <div class="form__item">
             <%= f.label :alcohol_volume_id, 'Alcohol Volume', class:"form__label" %><br>
-            <%= f.collection_select(:alcohol_lebel_id, AlcoholVolume.all, :id, :name, {}, { class:"form__select"}) %>
+            <%= f.collection_select(:alcohol_volume_id, AlcoholVolume.all, :id, :name, {}, { class:"form__select"}) %>
           </div>
           <div class="form__item">
             <%= f.label :impression_id, 'First Impression', class:"form__label" %><br>

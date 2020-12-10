@@ -36,8 +36,9 @@ $cAwesome:  'Dancing Script', cursive;
     }
   }
 
-  &__content{
-    width: 45%;
+  &__content,
+  &__image {
+    width: 90%;
     font-size: 15px;
   }
 
