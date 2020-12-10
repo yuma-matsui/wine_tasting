@@ -52,6 +52,7 @@ Things you may want to cover:
 | alcohol_volume_id | integer    | null: false                    |
 | impression_id     | integer    | null: false                    |
 | flavor_id         | integer    | null: false                    |
+| second_flavor_id  | integer    | null: false                    |
 | acidity_level_id  | integer    | null: false                    |
 | tannic_level_id   | integer    |                                |
 | comment           | text       | null: false                    |
