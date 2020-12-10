@@ -1,9 +1,11 @@
-#error_explanation{
+$cAwesome:  'Dancing Script', cursive;
+
+#error_explanation {
   color: red;
   width: 50%;
   margin: 0 auto;
   & h2{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
   }
   & ul li{
@@ -15,4 +17,9 @@
       margin-bottom: 0;
     }
   }
+}
+
+.error-alert{
+  color: red;
+  font-family: $cAwesome; 
 }
