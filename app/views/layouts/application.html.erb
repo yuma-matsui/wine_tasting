@@ -16,7 +16,11 @@
 
   <body>
     <div id="global-container">
-      <%= yield %>
+      <div id="container">
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <%= javascript_pack_tag 'modules/swiper.js' %>
