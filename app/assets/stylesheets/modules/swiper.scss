@@ -1,4 +1,103 @@
+@import 'mixin';
+
 .swiper-container {
-  width: 100%;
-  height: 300px;
+  overflow: visible !important;
+}
+
+.swiper-slide{
+  height: 500px;
+  overflow: hidden;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: skyblue, $alpha: .1);
+  }
+
+  & > img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(1.3);
+    transition: transform 1.9s ease;
+  }
+
+  &-active{
+    & > img{
+      transform: none;
+    }
+
+    & .hero__title{
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+}
+
+.hero{
+  &__title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 20px));
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .3s ease 1s, transform .3s ease 1s;
+
+    & .sub-title{
+      display: block;
+      font-size: 20px;
+    }
+  }
+
+  &__footer{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 2;
+    height: 68px;
+    width: 22px;
+    overflow: hidden;
+  }
+
+  &__downarrow{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 6px;
+    @include animation(
+      $name: kf-arrow-anime, 
+      $iteration-count: infinite, 
+      $duration: 2s, 
+      $timing-function: linear)
+  }
+
+  &__scrolltext{
+    position: absolute;
+    transform: rotate(90deg);
+    color: rgba($color: white, $alpha: .7);
+    left: -8px;
+    top: 11px;
+    font-size: 1.1em;
+  }
+}
+
+@keyframes kf-arrow-anime{
+  0%,
+  50%,
+  100%{
+    transform: translateY(-10%);
+  }
+  30%{
+    transform: none;
+  }
 }
