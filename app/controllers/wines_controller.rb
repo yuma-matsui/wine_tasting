@@ -1,6 +1,7 @@
 class WinesController < ApplicationController
   
   def home
+    @wines = Wine.all
   end
 
   def new
