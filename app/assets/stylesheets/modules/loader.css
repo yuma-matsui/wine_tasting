@@ -1,6 +1,6 @@
 #global-container {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 
 .pace-running #global-container {
@@ -42,7 +42,7 @@
 .pace-progress-inner {
   width: 40px;
   height: 40px;
-  background-color: #904669;
+  background-color: #333;
   margin: 0 auto;
   -webkit-animation-name: sk-rotateplane;
           animation-name: sk-rotateplane;
