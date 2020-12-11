@@ -6,7 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="modules/loader.css">
-    <%= javascript_pack_tag 'pace.js' %>
+    <%= javascript_pack_tag 'modules/pace.js' %>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
@@ -15,7 +16,13 @@
 
   <body>
     <div id="global-container">
-      <%= yield %>
+      <div id="container">
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <%= javascript_pack_tag 'main.js' %>
   </body>
 </html>

@@ -26,15 +26,56 @@
   <%# ヘッダーここまで %>
 
   <%# メインここから %>
-  <div class="main-wrapper mt-5">
+
+  <!-- ヒーロースライダーここから -->
+  <div class="hero">
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="hero__title">Tasting is fun.</div>
+            <%= image_tag "/assets/slider1.jpg" %>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__title">
+              <span class="sub-title">外観</span>
+              <span class="main-title">Look</span>
+            </div>
+            <%= image_tag "/assets/slider2.jpg" %>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__title">
+              <span class="sub-title">香り</span>
+              <span class="main-title">Flavor</span>
+            </div>
+            <%= image_tag "/assets/slider3.jpg" %>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__title">
+              <span class="sub-title">味わい</span>
+              <span class="main-title">Taste</span>
+            </div>
+            <%= image_tag "/assets/slider4.jpg" %>
+          </div>
+      </div>
+      <div class="hero__footer">
+        <%= image_tag '/assets/arrow.svg', class:'hero__downarrow' %>
+        <span class="hero__scrolltext">scroll</span>
+      </div>
+    </div>
+  </div>
+  <!-- ヒーロースライダーここまで -->
+
+  <%# <div class="main-wrapper mt-5">
     <div class="container image-box">
       <%= image_tag "/assets/vineyard.jpg", class:"main-img img-fluid" %>
-      <div class="image-box-text">
+      <%# <div class="image-box-text">
         <p>How to use tasting note</p>
         <p>Click here <i class="far fa-hand-pointer"></i></p>
       </div>
     </div>
-  </div>
+  </div> %>
   <%# メインここまで %>
 
   <%# セカンドここから %>
