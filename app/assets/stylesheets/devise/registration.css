@@ -1,5 +1,4 @@
 .registration-wrapper {
-  font-family: "Dancing Script", cursive;
   position: relative;
   width: 95%;
   margin: 10px auto;
@@ -20,6 +19,7 @@
   font-size: 35px;
   font-weight: bold;
   padding: 20px 0;
+  font-family: "Dancing Script", cursive;
 }
 
 .registration-wrapper .registration-form .form-box {
@@ -30,6 +30,7 @@
 
 .registration-wrapper .registration-form .form-label {
   font-size: 25px;
+  font-family: "Dancing Script", cursive;
 }
 
 .registration-wrapper .register-btn {
@@ -41,6 +42,7 @@
   padding: 5px 15px;
   -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.9);
           box-shadow: 0 3px 0 rgba(0, 0, 0, 0.9);
+  font-family: "Dancing Script", cursive;
 }
 
 .registration-wrapper .register-btn:active {
