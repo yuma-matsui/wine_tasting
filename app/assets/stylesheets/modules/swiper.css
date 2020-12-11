@@ -1,3 +1,7 @@
+.hero {
+  overflow: hidden;
+}
+
 .swiper-container {
   overflow: visible !important;
 }
