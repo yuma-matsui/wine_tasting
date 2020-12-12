@@ -134,6 +134,11 @@ footer h3 {
   font-size: 25px;
 }
 
+footer .footer-article {
+  width: 90%;
+  margin: 0 auto;
+}
+
 footer .footer-article h5 {
   font-size: 18px;
   font-weight: 600;
