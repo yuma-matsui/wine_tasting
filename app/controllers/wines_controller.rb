@@ -11,7 +11,6 @@ class WinesController < ApplicationController
 
   def create
     @wine = Wine.new(wine_params)
-    # binding.pry
     if @wine.save
       redirect_to root_path
     else
