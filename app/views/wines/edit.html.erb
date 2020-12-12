@@ -1,4 +1,100 @@
 <%= render 'shared/main_header' %>
+
+<div id="edit-wrapper">
+  <div class="edit">
+    <div class="edit__main">
+      <h2 class="edit__main-title"><%= @wine.name %></h2>
+      <%= image_tag @wine.image, class: "edit__main-img" %>
+    </div>
+    <div class="edit__description">
+      <ul class="edit__ul">
+        <ul class="edit__description-ul">
+          <h3 class="edit__description-title">Detail</h3>
+          <li>
+            <dl>
+              <dt>Color</dt>
+              <dd><%= @wine.color.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Variety</dt>
+              <dd><%= @wine.variety.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Country</dt>
+              <dd><%= @wine.country.name %></dd>
+            </dl>
+          </li>
+        </ul>
+        <ul class="edit__description-ul">
+          <li>
+            <dl>
+              <dt>Vintage</dt>
+              <dd><%= @wine.vintage.year %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Alcohol Volume</dt>
+              <dd><%= @wine.alcohol_volume.name %></dd>
+            </dl>
+          </li>
+        </ul>
+      </ul>
+      <ul class="edit__ul">
+        <h3 class="edit__description-title">Flavor</h3>
+        <ul class="edit__description-ul">
+          <li>
+            <dl>
+              <dt>Impression</dt>
+              <dd><%= @wine.impression.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Flavor1</dt>
+              <dd><%= @wine.flavor.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Flavor2</dt>
+              <dd><%= @wine.second_flavor.name %></dd>
+            </dl>
+          </li>
+        </ul>
+      </ul>
+      <ul class="edit__ul">
+        <h3 class="edit__description-title">Taste</h3>
+        <ul class="edit__description-ul">
+          <li>
+            <dl>
+              <dt>Acidity</dt>
+              <dd><%= @wine.acidity_level.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Tannic</dt>
+              <dd><%= @wine.tannic_level.name %></dd>
+            </dl>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <div class="edit__comment">
+      <dl>
+        <dt>Comment</dt>
+        <dd><%= @wine.comment %></dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
 <%= render 'shared/main_footer' %>
 <%# モーダル部分 %>
 <%= render 'article.country' %>
