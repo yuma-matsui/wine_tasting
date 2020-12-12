@@ -1,0 +1,108 @@
+<%= render 'shared/main_header' %>
+
+<div id="edit-wrapper">
+  <div class="edit">
+    <div class="edit__main">
+      <h2 class="edit__main-title"><%= @wine.name %></h2>
+      <% if user_signed_in? && current_user.id = @wine.user_id %>
+       <%= link_to '編集する', edit_wine_path(@wine), class:"text-decoration-none text-dark" %>
+       <%= link_to '削除する', "/wines/#{@wine.id}", method: :delete, class:"text-decoration-none text-dark" %>
+      <% else %>
+        <div>いいね</div>
+      <% end %>
+      <%= image_tag @wine.image, class: "edit__main-img" %>
+    </div>
+    <div class="edit__description d-md-flex justify-content-between">
+      <ul class="edit__ul">
+        <ul class="edit__description-ul">
+          <h3 class="edit__description-title">Detail</h3>
+          <li>
+            <dl>
+              <dt>Color</dt>
+              <dd><%= @wine.color.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Variety</dt>
+              <dd><%= @wine.variety.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Country</dt>
+              <dd><%= @wine.country.name %></dd>
+            </dl>
+          </li>
+        </ul>
+        <ul class="edit__description-ul">
+          <li>
+            <dl>
+              <dt>Vintage</dt>
+              <dd><%= @wine.vintage.year %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Alcohol Volume</dt>
+              <dd><%= @wine.alcohol_volume.name %></dd>
+            </dl>
+          </li>
+        </ul>
+      </ul>
+      <ul class="edit__ul mt-5 mt-md-0">
+        <h3 class="edit__description-title">Flavor</h3>
+        <ul class="edit__description-ul">
+          <li>
+            <dl>
+              <dt>Impression</dt>
+              <dd><%= @wine.impression.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Flavor1</dt>
+              <dd><%= @wine.flavor.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Flavor2</dt>
+              <dd><%= @wine.second_flavor.name %></dd>
+            </dl>
+          </li>
+        </ul>
+      </ul>
+      <ul class="edit__ul mt-5 mt-md-0">
+        <h3 class="edit__description-title">Taste</h3>
+        <ul class="edit__description-ul">
+          <li>
+            <dl>
+              <dt>Acidity</dt>
+              <dd><%= @wine.acidity_level.name %></dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Tannic</dt>
+              <dd><%= @wine.tannic_level.name %></dd>
+            </dl>
+          </li>
+        </ul>
+      </ul>
+    </div>
+    <div class="edit__comment">
+      <dl>
+        <dt><%= link_to "#{@wine.user.first_name}", '#', class:"text-decoration-none text-dark"%>'s Comment</dt>
+        <dd><%= @wine.comment %></dd>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/main_footer' %>
+<%# モーダル部分 %>
+<%= render 'article.country' %>
+<%= render 'article.white' %>
+<%= render 'article.red' %>
+<%# モーダル部分 %>
