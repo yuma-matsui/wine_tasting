@@ -1,28 +1,6 @@
 <div class="home">
   <%# ヘッダーここから %>
-  <header>
-    <div class="container pt-3">
-      <div class="d-flex justify-content-center">
-        <h1>Tasting Note</h1>
-        <%= image_tag "/assets/top.logo.jpeg", class:'header-img'%>
-      </div>
-      <nav>
-        <ul class="d-flex justify-content-between mt-5">
-          <%# <li>Tasting Note</li> %>
-          <li>カテゴリー</li>
-          <li><a href="#footer-article" class="text-decoration-none text-dark">記事</a></li>
-          <% if user_signed_in? %>
-            <li><%= link_to 'ノート作成', new_wine_path, class: 'text-decoration-none text-dark' %></li>
-            <li><%= link_to '登録情報変更', edit_user_registration_path, class: 'text-decoration-none text-dark' %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, class: 'text-decoration-none text-dark', method: :delete %></li>
-          <% else %>
-            <li><%= link_to 'ログイン', new_user_session_path, class: 'text-decoration-none text-dark' %></li>
-            <li><%= link_to '会員登録', new_user_registration_path, class:'text-decoration-none text-dark' %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <%= render 'shared/main_header' %>
   <%# ヘッダーここまで %>
 
   <%# メインここから %>
@@ -67,15 +45,6 @@
   </div>
   <!-- ヒーロースライダーここまで -->
 
-  <%# <div class="main-wrapper mt-5">
-    <div class="container image-box">
-      <%= image_tag "/assets/vineyard.jpg", class:"main-img img-fluid" %>
-      <%# <div class="image-box-text">
-        <p>How to use tasting note</p>
-        <p>Click here <i class="far fa-hand-pointer"></i></p>
-      </div>
-    </div>
-  </div> %>
   <%# メインここまで %>
 
   <%# セカンドここから %>
@@ -84,7 +53,7 @@
       <h2 class="text-center mb-3">Notes</h2>
       <div class="wines">
         <% @wines.each do |wine| %>
-          <%= link_to "#", class:"wines__item bg-dark" do %>
+          <%= link_to wine_path(wine), class:"wines__item bg-dark" do %>
             <%= image_tag wine.image.variant(resize: "500x500"), class:"wines__img" %>
             <h2 class="wines__title"><%= wine.name %></h2>
           <% end %>
@@ -97,64 +66,7 @@
   <%# セカンドここまで %>
 
   <%# フッターここから %>
-  <footer>
-    <div class="container" id="footer-article">
-      <div class="footer-article d-flex justify-content-around mt-4">
-        <div class="article-country">
-          <h5>生産国</h5>
-          <nav class="d-md-flex mt-3 mt-md-0">
-            <ul class="mr-3">
-              <li data-toggle="modal" data-target="#exampleModal">フランス</li>
-              <li data-toggle="modal" data-target="#exampleModal2">イタリア</li>
-              <li data-toggle="modal" data-target="#exampleModal3">スペイン</li>
-              <li data-toggle="modal" data-target="#exampleModal4">アメリカ</li>
-              <li data-toggle="modal" data-target="#exampleModal5">チリ</li>
-            </ul>
-            <ul>
-              <li data-toggle="modal" data-target="#exampleModal6">オーストラリア</li>
-              <li data-toggle="modal" data-target="#exampleModal7">ニュージーランド</li>
-              <li data-toggle="modal" data-target="#exampleModal8">日本</li>
-              <li data-toggle="modal" data-target="#exampleModal9">南アフリカ</li>
-              <li data-toggle="modal" data-target="#exampleModal10">アルゼンチン</li>
-            </ul>
-          </nav>
-        </div>
-        <div class="article-grape">
-          <h5>ぶどう品種</h5>
-          <div class="d-md-flex mt-3 mt-md-0">
-            <nav class="mr-4">
-              <h6>白ぶどう</h6>
-              <ul>
-                <li data-toggle="modal" data-target="#exampleModal11">シャルドネ</li>
-                <li data-toggle="modal" data-target="#exampleModal12">ソーヴィニヨン・ブラン</li>
-                <li data-toggle="modal" data-target="#exampleModal13">リースリング</li>
-                <li data-toggle="modal" data-target="#exampleModal14">ヴィオニエ</li>
-                <li data-toggle="modal" data-target="#exampleModal15">甲州</li>
-                <li data-toggle="modal" data-target="#exampleModal16">ゲヴェルツトラミネール</li>
-                <li data-toggle="modal" data-target="#exampleModal17">ピノ・グリ</li>
-              </ul>
-            </nav>
-            <nav>
-              <h6>黒ぶどう</h6>
-              <ul>
-                <li data-toggle="modal" data-target="#exampleModal18">カベルネ・ソーヴィニヨン</li>
-                <li data-toggle="modal" data-target="#exampleModal19">メルロ</li>
-                <li data-toggle="modal" data-target="#exampleModal20">ピノ・ノワール</li>
-                <li data-toggle="modal" data-target="#exampleModal21">シラー</li>
-                <li data-toggle="modal" data-target="#exampleModal22">マルベック</li>
-                <li data-toggle="modal" data-target="#exampleModal23">サンジョベーゼ</li>
-                <li data-toggle="modal" data-target="#exampleModal24">テンプラニーリョ</li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-logo d-flex justify-content-center mt-3">
-      <h4>Tasting Note</h1>
-      <%= image_tag "/assets/top.logo.jpeg", class:"footer-img" %>
-    </div>
-  </footer>
+  <%= render 'shared/main_footer'%>
   <%# フッターここまで %>
 
   <%# モーダル部分 %>
