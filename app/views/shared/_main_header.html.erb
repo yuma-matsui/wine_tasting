@@ -1,9 +1,11 @@
 <header>
   <div class="container pt-3">
-    <div class="d-flex justify-content-center">
-      <h1>Tasting Note</h1>
-      <%= image_tag "/assets/top.logo.jpeg", class:'header-img'%>
-    </div>
+    <%= link_to root_path, class:'text-decoration-none' do %>
+      <div class="d-flex justify-content-center">
+        <h1>Tasting Note</h1>
+        <%= image_tag "/assets/top.logo.jpeg", class:'header-img'%>
+      </div>
+    <% end %>
     <nav>
       <ul class="d-flex justify-content-between mt-5">
         <%# <li>Tasting Note</li> %>
