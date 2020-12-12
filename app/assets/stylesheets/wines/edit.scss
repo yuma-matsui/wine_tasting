@@ -24,8 +24,6 @@ $cBorder: rgba($color: #535353, $alpha: .5);
 
   &__description{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     border-top: 1px solid $cBorder;
     padding: 30px 0;
 

@@ -6,7 +6,7 @@
       <h2 class="edit__main-title"><%= @wine.name %></h2>
       <%= image_tag @wine.image, class: "edit__main-img" %>
     </div>
-    <div class="edit__description">
+    <div class="edit__description d-md-flex justify-content-between">
       <ul class="edit__ul">
         <ul class="edit__description-ul">
           <h3 class="edit__description-title">Detail</h3>
@@ -44,7 +44,7 @@
           </li>
         </ul>
       </ul>
-      <ul class="edit__ul">
+      <ul class="edit__ul mt-5 mt-md-0">
         <h3 class="edit__description-title">Flavor</h3>
         <ul class="edit__description-ul">
           <li>
@@ -67,7 +67,7 @@
           </li>
         </ul>
       </ul>
-      <ul class="edit__ul">
+      <ul class="edit__ul mt-5 mt-md-0">
         <h3 class="edit__description-title">Taste</h3>
         <ul class="edit__description-ul">
           <li>
@@ -93,7 +93,6 @@
     </div>
   </div>
 </div>
-
 
 <%= render 'shared/main_footer' %>
 <%# モーダル部分 %>
