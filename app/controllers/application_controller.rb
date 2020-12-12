@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
-  before_action :authenticate_user!, except: [:home]
+  before_action :authenticate_user!, except: [:home, :show]
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :configure_permitted_update, if: :devise_controller?
 

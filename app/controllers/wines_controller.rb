@@ -1,5 +1,5 @@
 class WinesController < ApplicationController
-  before_action :find_wine, only: :edit
+  before_action :find_wine, only: [:show, :edit, :destroy]
   
   def home
     @wines = Wine.all
