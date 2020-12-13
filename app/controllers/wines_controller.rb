@@ -18,6 +18,14 @@ class WinesController < ApplicationController
     end
   end
 
+  def destroy
+    if @wine.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
 
   private
 
