@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 $cAwesome:  'Dancing Script', cursive;
+$cBorder: rgba($color: #535353, $alpha: .5);
+
 /* ============共通部分============== */
 /* ================================== */
 body{
@@ -20,9 +22,11 @@ ul{
 /* ============ヘッダー============== */
 /* ================================== */
 
-header{
-  width: 100%;
+.header{
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
+
   & h1{
     font-size: 40px;
     color: brown;
@@ -49,28 +53,6 @@ header{
 /* ==============メイン============== */
 /* ================================== */
 
-.main-wrapper{
-  width: 100%;
-
-  & .image-box{
-    position: relative;
-    & .main-img{
-      height: 500px;
-      width: 100%;
-    }
-    & .image-box-text{
-      position: absolute;
-      top: 10px;
-      left: 25px;
-
-      & p{
-        font-size: 38px;
-        color: white;
-        font-family: $cAwesome;
-      }
-    }
-  }
-}
 /* ===========メインここまで========= */
 /* ================================== */
 
@@ -80,7 +62,11 @@ header{
 /* ================================== */
 
 .second-wrapper{
-  width: 100%;
+  width: 90%;
+  margin: 45px auto;
+  border-top: 1px solid $cBorder;
+  border-bottom: 1px solid $cBorder;
+  padding: 45px 0;
 
   & h2{
     font-size: 40px;
