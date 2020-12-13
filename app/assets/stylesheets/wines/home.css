@@ -15,24 +15,25 @@ ul {
 /* ================================== */
 /* ============ヘッダー============== */
 /* ================================== */
-header {
-  width: 100%;
+.header {
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
 }
 
-header h1 {
+.header h1 {
   font-size: 40px;
   color: brown;
   font-family: "Dancing Script", cursive;
   line-height: 60px;
 }
 
-header .header-img {
+.header .header-img {
   height: 60px;
   width: 60px;
 }
 
-header ul {
+.header ul {
   font-size: 18px;
   font-weight: 600;
 }
@@ -41,37 +42,16 @@ header ul {
 /* ================================== */
 /* ==============メイン============== */
 /* ================================== */
-.main-wrapper {
-  width: 100%;
-}
-
-.main-wrapper .image-box {
-  position: relative;
-}
-
-.main-wrapper .image-box .main-img {
-  height: 500px;
-  width: 100%;
-}
-
-.main-wrapper .image-box .image-box-text {
-  position: absolute;
-  top: 10px;
-  left: 25px;
-}
-
-.main-wrapper .image-box .image-box-text p {
-  font-size: 38px;
-  color: white;
-  font-family: "Dancing Script", cursive;
-}
-
 /* ===========メインここまで========= */
 /* ================================== */
 /* ============セカンド============== */
 /* ================================== */
 .second-wrapper {
-  width: 100%;
+  width: 90%;
+  margin: 45px auto;
+  border-top: 1px solid rgba(83, 83, 83, 0.5);
+  border-bottom: 1px solid rgba(83, 83, 83, 0.5);
+  padding: 45px 0;
 }
 
 .second-wrapper h2 {

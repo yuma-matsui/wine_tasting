@@ -1,5 +1,5 @@
 class WinesController < ApplicationController
-  before_action :find_wine, only: [:show, :edit, :destroy]
+  before_action :find_wine, only: [:show, :edit, :destroy, :update]
   
   def home
     @wines = Wine.all
@@ -15,6 +15,22 @@ class WinesController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @wine.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
+  def update
+    if @wine.update(wine_params)
+      render :show
+    else
+      render :edit
     end
   end
 

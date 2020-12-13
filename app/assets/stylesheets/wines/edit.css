@@ -1,79 +1,66 @@
-.edit {
-  width: 90%;
-  margin: 45px auto;
-  padding: 45px 0;
-  border-top: 1px solid rgba(83, 83, 83, 0.5);
-  border-bottom: 1px solid rgba(83, 83, 83, 0.5);
+.edit__form-item {
+  margin-bottom: 20px;
 }
 
-.edit__main {
+.edit__form-name {
+  font-size: 15px;
+}
+
+.edit__form-img {
+  font-size: 12px;
+}
+
+.edit__form-label {
+  font-size: 15px;
+  color: rgba(83, 83, 83, 0.5);
+}
+
+.edit__form-select {
   width: 100%;
+  font-size: 12px;
+  padding: 3px;
 }
 
-.edit__main-title {
-  font-size: 35px;
+.btn-wrap {
+  position: relative;
+  border: 1px solid black;
+  width: 60px;
+  padding: 3px 0;
+  overflow: hidden;
 }
 
-.edit__main-img {
+.btn-wrap:hover::before {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.btn-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 20px 0;
+  background-color: black;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  z-index: -1;
 }
 
-.edit__description {
+.edit__form-btn {
+  display: block;
+  font-size: 15px;
+  background-color: unset;
+  border: none;
   width: 100%;
-  border-top: 1px solid rgba(83, 83, 83, 0.5);
-  padding: 30px 0;
+  outline: none;
 }
 
-.edit__description-title {
-  margin-bottom: 8px;
-}
-
-.edit__description-ul dl, .edit__description-ul dd {
-  margin: 0;
-}
-
-.edit__description-ul dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 8px;
-}
-
-.edit__description-ul dt {
-  color: rgba(83, 83, 83, 0.5);
-  font-size: 16px;
-  margin-right: 8px;
-}
-
-.edit__description-ul dd {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.edit__comment {
-  border-top: 1px solid rgba(83, 83, 83, 0.5);
-  width: 100%;
-  padding: 30px 0;
-}
-
-.edit__comment dt {
-  color: rgba(83, 83, 83, 0.5);
-  font-size: 16px;
-  margin-right: 8px;
-}
-
-.edit__comment dd {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.edit__ul {
-  padding: 0;
-  margin: 0;
+.edit__form-btn:hover {
+  color: white;
 }
 /*# sourceMappingURL=edit.css.map */

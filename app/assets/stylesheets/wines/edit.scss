@@ -1,79 +1,61 @@
 $cBorder: rgba($color: #535353, $alpha: .5);
 
-.edit{
-  width: 90%;
-  margin: 45px auto;
-  padding: 45px 0;
-  border-top: 1px solid $cBorder;
-  border-bottom: 1px solid $cBorder;
+.edit__form-item{
+  margin-bottom: 20px;
+}
 
-  &__main{
-    width: 100%;
+.edit__form-name{
+  font-size: 15px;
+}
 
-    &-title{
-      font-size: 35px;
-    }
+.edit__form-img{
+  font-size: 12px;
+}
 
-    &-img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      padding: 20px 0;
-    }
+.edit__form-label{
+  font-size: 15px;
+  color: $cBorder;
+}
+
+.edit__form-select{
+  width: 100%;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.btn-wrap{
+  position: relative;
+  border: 1px solid black;
+  width: 60px;
+  padding: 3px 0;
+  overflow: hidden;
+  &:hover::before{
+    transform: none;
   }
 
-  &__description{
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-top: 1px solid $cBorder;
-    padding: 30px 0;
-
-    &-title{
-      margin-bottom: 8px;
-    }
-
-    &-ul{
-      & dl, dd{
-        margin: 0;
-      }
-
-      & dl{
-        display: flex;
-        margin-bottom: 8px;
-      }
-
-      & dt{
-        color: $cBorder;
-        font-size: 16px;
-        margin-right: 8px;
-      }
-
-      & dd{
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 20px;
-      }
-    }
+    height: 100%;
+    background-color: black;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    z-index: -1;
   }
+}
 
-  &__comment{
-    border-top: 1px solid $cBorder;
-    width: 100%;
-    padding: 30px 0;
+.edit__form-btn{
+  display: block;
+  font-size: 15px;
+  background-color: unset;
+  border: none;
+  width: 100%;
+  outline: none;
 
-    & dt{
-      color: $cBorder;
-      font-size: 16px;
-      margin-right: 8px;
-    }
-
-    & dd{
-      font-size: 20px;
-      font-weight: bold;
-    }
-  }
-
-  &__ul{
-    padding: 0;
-    margin: 0;
+  &:hover{
+    color: white;
   }
 }

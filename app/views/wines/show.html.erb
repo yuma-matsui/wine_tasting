@@ -4,12 +4,14 @@
   <div class="edit">
     <div class="edit__main">
       <h2 class="edit__main-title"><%= @wine.name %></h2>
-      <% if user_signed_in? && current_user.id = @wine.user_id %>
-       <%= link_to '編集する', edit_wine_path(@wine), class:"text-decoration-none text-dark" %>
-       <%= link_to '削除する', "/wines/#{@wine.id}", method: :delete, class:"text-decoration-none text-dark" %>
-      <% else %>
-        <div>いいね</div>
-      <% end %>
+      <div class="edit__main-btn">
+        <% if user_signed_in? && current_user.id = @wine.user_id %>
+        <%= link_to '編集する', edit_wine_path(@wine), class:"edit__main-link" %>
+        <%= link_to '削除する', "/wines/#{@wine.id}", method: :delete, class:"edit__main-link" %>
+        <% else %>
+          <div>いいね</div>
+        <% end %>
+      </div>
       <%= image_tag @wine.image, class: "edit__main-img" %>
     </div>
     <div class="edit__description d-md-flex justify-content-between">
