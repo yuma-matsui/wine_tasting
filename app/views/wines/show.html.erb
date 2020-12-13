@@ -3,13 +3,14 @@
 <div id="edit-wrapper">
   <div class="edit">
     <div class="edit__main">
-      <h2 class="edit__main-title"><%= @wine.name %></h2>
+      <div class="d-flex">
+        <h2 class="edit__main-title"><%= @wine.name %></h2>
+        <%= link_to "Like", "#", class:"edit__main-link favorite" %>
+      </div>
       <div class="edit__main-btn">
         <% if user_signed_in? && current_user.id = @wine.user_id %>
-        <%= link_to '編集する', edit_wine_path(@wine), class:"edit__main-link" %>
-        <%= link_to '削除する', "/wines/#{@wine.id}", method: :delete, class:"edit__main-link" %>
-        <% else %>
-          <div>いいね</div>
+          <%= link_to '編集する', edit_wine_path(@wine), class:"edit__main-link" %>
+          <%= link_to '削除する', "/wines/#{@wine.id}", method: :delete, class:"edit__main-link" %>
         <% end %>
       </div>
       <%= image_tag @wine.image, class: "edit__main-img" %>

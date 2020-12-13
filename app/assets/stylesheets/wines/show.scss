@@ -31,6 +31,12 @@ $cBorder: rgba($color: #535353, $alpha: .5);
       padding: 5px;
       overflow: hidden;
 
+      &.favorite{
+        height: 35px;
+        line-height: 25px;
+        margin-top: 5px;
+      }
+
       &:hover{
         color: white;
         &::before{

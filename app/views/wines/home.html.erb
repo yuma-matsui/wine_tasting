@@ -48,17 +48,19 @@
   <%# メインここまで %>
 
   <%# セカンドここから %>
-  <div class="second-wrapper">
-    <h2 class="text-center mb-3">Notes</h2>
-    <div class="wines">
+  <div class="second">
+    <h2 class="second__title">Notes</h2>
+    <div class="second__wines">
       <% @wines.each do |wine| %>
-        <%= link_to wine_path(wine), class:"wines__item bg-dark" do %>
-          <%= image_tag wine.image.variant(resize: "500x500"), class:"wines__img" %>
-          <h2 class="wines__title"><%= wine.name %></h2>
+        <%= link_to wine_path(wine), class:"second__wines-item bg-dark" do %>
+          <%= image_tag wine.image.variant(resize: "500x500"), class:"second__wines-img" %>
+          <h2 class="second__wines-title"><%= wine.name %></h2>
         <% end %>
       <% end %>
     </div>
-    <div class="wines_scroll text-center mb-2">Scroll</div>
+    <div class="second__footer">
+      <span class="second__scrolltext">scroll</span>
+    </div>
     <a href="#" class="text-center d-block text-decoration-none text-dark mt-3">VIEW ALL</a>
   </div>
   <%# セカンドここまで %>

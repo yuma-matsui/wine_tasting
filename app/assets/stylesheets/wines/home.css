@@ -40,27 +40,26 @@ ul {
 
 /* =========ヘッダーここまで========= */
 /* ================================== */
-/* ==============メイン============== */
-/* ================================== */
-/* ===========メインここまで========= */
-/* ================================== */
 /* ============セカンド============== */
 /* ================================== */
-.second-wrapper {
+.second {
   width: 90%;
   margin: 45px auto;
   border-top: 1px solid rgba(83, 83, 83, 0.5);
   border-bottom: 1px solid rgba(83, 83, 83, 0.5);
   padding: 45px 0;
+  position: relative;
 }
 
-.second-wrapper h2 {
+.second .second__title {
   font-size: 40px;
   font-weight: bold;
   font-family: "Dancing Script", cursive;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-.second-wrapper .wines {
+.second__wines {
   width: 100%;
   height: 100%;
   height: 100%;
@@ -70,7 +69,7 @@ ul {
   position: relative;
 }
 
-.second-wrapper .wines__item {
+.second__wines-item {
   display: inline-block;
   margin: 0 30px;
   height: 450px;
@@ -81,14 +80,14 @@ ul {
   overflow: hidden;
 }
 
-.second-wrapper .wines__img {
+.second__wines-img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   height: 90%;
 }
 
-.second-wrapper .wines__title {
+.second__wines-title {
   text-align: center;
   font-size: 18px;
   color: white;
@@ -96,9 +95,17 @@ ul {
   padding: 0 10px;
 }
 
-.second-wrapper a {
+.second a {
   font-size: 23px;
   font-weight: 600;
+}
+
+.second__footer {
+  position: absolute;
+  left: 50%;
+  bottom: 110px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* ==========セカンドここまで======== */

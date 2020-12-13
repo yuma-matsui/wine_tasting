@@ -32,6 +32,12 @@
   overflow: hidden;
 }
 
+.edit__main-link.favorite {
+  height: 35px;
+  line-height: 25px;
+  margin-top: 5px;
+}
+
 .edit__main-link:hover {
   color: white;
 }
