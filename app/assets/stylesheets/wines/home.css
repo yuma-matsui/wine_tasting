@@ -116,6 +116,10 @@ footer {
   width: 100%;
 }
 
+footer .article-country {
+  width: 35%;
+}
+
 footer h3 {
   font-weight: 600;
   font-size: 25px;

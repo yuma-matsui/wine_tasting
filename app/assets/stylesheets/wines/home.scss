@@ -124,6 +124,10 @@ ul{
 footer{
   width: 100%;
 
+  & .article-country{
+    width: 35%;
+  }
+
   & h3{
     font-weight: 600;
     font-size: 25px;
