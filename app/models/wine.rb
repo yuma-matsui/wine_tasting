@@ -1,6 +1,7 @@
 class Wine < ApplicationRecord
   belongs_to :user
   has_one_attached :image, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :acidity_level
