@@ -5,10 +5,12 @@
     <div class="edit__main">
       <div class="d-flex">
         <h2 class="edit__main-title"><%= @wine.name %></h2>
-        <%= link_to "Like", "#", class:"edit__main-link favorite" %>
+        <% if user_signed_in? && current_user.id != @wine.user_id %>
+          <%= link_to "Like", "#", class:"edit__main-link favorite" %>
+        <% end %>
       </div>
       <div class="edit__main-btn">
-        <% if user_signed_in? && current_user.id = @wine.user_id %>
+        <% if user_signed_in? && current_user.id == @wine.user_id %>
           <%= link_to '編集する', edit_wine_path(@wine), class:"edit__main-link" %>
           <%= link_to '削除する', "/wines/#{@wine.id}", method: :delete, class:"edit__main-link" %>
         <% end %>
