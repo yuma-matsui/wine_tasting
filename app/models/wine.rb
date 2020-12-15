@@ -17,4 +17,8 @@ class Wine < ApplicationRecord
   validates :name, :color, :variety, :country, :vintage, :alcohol_volume, :image, :impression, :flavor, :second_flavor, :acidity_level, :comment, presence: true
   validates :color_id, :variety_id, :country_id, :alcohol_volume_id, :impression_id, :flavor_id, :acidity_level_id, :second_flavor_id, numericality: { other_than: 1, message: "を選択してください" }
 
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
+
 end
