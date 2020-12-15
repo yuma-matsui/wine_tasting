@@ -3,15 +3,13 @@ class FavoritesController < ApplicationController
   before_action :set_favorite
 
   def create
-    favorite = current_user.favorites.build(wine_id: params[:wine_id])
+    favorite = current_user.favorites.build(wine_id: @wine.id)
     favorite.save
-    redirect_to wine_path(@wine)
   end
 
   def destroy
-      favorite = Favorite.find_by(wine_id: params[:wine_id], user_id: current_user.id)
+      favorite = Favorite.find_by(wine_id: @wine.id, user_id: current_user.id)
       favorite.destroy
-      redirect_to wine_path(@wine)
   end
 
   private
