@@ -39,6 +39,11 @@
   margin-left: 5px;
 }
 
+.edit__main-link.favorite.delete {
+  background-color: black;
+  color: white;
+}
+
 .edit__main-link:hover {
   color: white;
 }
