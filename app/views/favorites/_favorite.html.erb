@@ -1,0 +1,7 @@
+<% if user_signed_in? && current_user.id != @wine.user_id  %>
+  <% if @wine.favorited_by?(current_user) %>
+    <%= link_to "Like #{@wine.favorites.count}", wine_favorite_path(@wine), method: :delete, class:"edit__main-link favorite delete", remote: true %>
+  <% else %>
+    <%= link_to "Like #{@wine.favorites.count}", wine_favorites_path(@wine), method: :post, class:"edit__main-link favorite create", remote: true %>
+  <% end %>
+<% end %>

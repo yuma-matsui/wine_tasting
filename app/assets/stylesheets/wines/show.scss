@@ -36,6 +36,13 @@ $cBorder: rgba($color: #535353, $alpha: .5);
         line-height: 25px;
         margin-top: 5px;
         margin-left: 5px;
+
+        &.create{
+        }
+        &.delete{
+          background-color: black;
+          color: white;
+        }
       }
 
       &:hover{
